@@ -106,6 +106,7 @@ Il reste enfin à ramener le registre temporaire $|Ψ_{3}⟩$ dans l'état $|0�
 On peut donc ensuite libéré le registre temporaire $|Ψ_{3}⟩$ ainsi que le qubit de retenue qui fût utilisé dans les additions modulaires $QFT$.
 
 *Schéma de la porte:*
+
 ![image](./pictures/PorteMultiplicationModulaireQFT.png)
 
 **Porte d'addition QFT:**
