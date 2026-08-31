@@ -70,7 +70,7 @@ Cependant, le QDK (Microsoft Quantum Development Kit) ne comporte plus les libra
 Comme une exponentiation est simplement plusieurs multiplications répétées, il suffit de faire plusieurs multiplications modulaires quantiques.
 Or nous travaillons ici avec des qubits (ou bits is vous préférez pour ne pas vous embrouiller), on a donc:
 
-$a^x$ mod $N$ = $a^{2^0*x_{0}}*a^{2^1*x_{1}}*...*a^{2^n*x_{n}}$ mod $N$
+$a^x$ mod $N$ = $a^{2^0*x_{0}}*a^{2^1*x_{1}}$...$a^{2^n*x_{n}}$ mod $N$
 
 On va donc appliquer une multiplication modulaire $QFT$ de $a^{2^{k}}$ pour chaque qubits $x_k$ du registre $|Ψ_{1}⟩$ si le qubit $x_k$ est dans l'état $|1⟩$ (donc une multiplication modulaire quantique contrôlée)
 
@@ -85,8 +85,8 @@ Si on applique des multiplications modulaires $QFT$ c'est car on utilise des add
 
 Lorsque l'on multiplie le premier registre $|Ψ_{1}⟩$ que l'on note $Y$ par $a^{2^{k}}$ que l'on note $C$ on a:
 
-$Y = 2^0*y_{0}+2^1*y_{1}+2^2*y_{2}+...+2^n*y_{n}$
-$Y*C = (C*2^0)*y_{0}+(C*2^1)*y_{1}+(C*2^2)*y_{2}+...+(C*2^n)*y_{n}$
+$Y = 2^0*y_{0}+2^1*y_{1}+2^2*y_{2}+$...$+2^n*y_{n}$
+$Y*C = (C*2^0)*y_{0}+(C*2^1)*y_{1}+(C*2^2)*y_{2}+$...$+(C*2^n)*y_{n}$
 
 Or on remarque donc que la multiplication modulaire par $C$ n'est qu'une suite d'addition modulaire QFT de $C*2^j$ si le qubit $y_{j}$ du registre $|Ψ_{2}⟩$ est dans l'état $|1⟩$ (donc des additions modulaires QFT contrôlées).
 
